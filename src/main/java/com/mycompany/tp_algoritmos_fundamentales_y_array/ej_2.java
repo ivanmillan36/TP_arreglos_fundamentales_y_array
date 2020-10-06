@@ -73,16 +73,16 @@ public class ej_2 {
     
     public static void ordenamientoPorSeleccion(int arreglo[]){
         int n = arreglo.length;
-        for(int i=1 ; i<(n-1) ; i++){
+        for(int i=0 ; i<n ; i++){
             int minimo = i;
             for(int j=i+1; j<n ; j++){
                 if(arreglo[j] < arreglo[minimo]){
                     minimo = j;
-                }
-                int aux = arreglo[minimo];
-                arreglo[minimo] = arreglo[j];
-                arreglo[j] = aux;
+                }              
             }
+            int aux = arreglo[minimo];
+            arreglo[minimo] = arreglo[i];
+            arreglo[i] = aux;
         }
     }
     
